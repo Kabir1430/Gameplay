@@ -139,7 +139,7 @@ public class AI : MonoBehaviour
         {
 
 
-            Debug.Log("RagDoll ");
+          //  Debug.Log("RagDoll ");
             EnableRagdoll();
 
             Capsuale.enabled = false;
@@ -192,13 +192,14 @@ public class AI : MonoBehaviour
     {
         if (Manager_Script.Store.Length != waypoints.Length)
         {
-            Debug.LogError("Source and destination arrays must have the same length.");
+
+            //Debug.LogError("Source and destination arrays must have the same length.");
             return;
         }
 
 
         // Print the names of destination objects (just for verification)
-        Debug.Log("Destination Array:");
+        //Debug.Log("Destination Array:");
         for (int i = 0; i < Manager_Script.Store.Length; i++)
         {
 
@@ -206,7 +207,7 @@ public class AI : MonoBehaviour
         }
         foreach (Transform obj in waypoints)
         {
-            Debug.Log(obj.name);
+         //    Debug.Log(obj.name);
         }
 
 
@@ -316,7 +317,7 @@ public class AI : MonoBehaviour
                 obstacleDetected = true;
                 // If the ray hits something, draw the ray and log the hit position
                 Debug.DrawRay(rayOrigin, direction * hit.distance, Color.red);
-                Debug.Log("Object detected at: " + hit.point);
+              //  Debug.Log("Object detected at: " + hit.point);
 
                 // Respond to the detected object here
 
@@ -337,7 +338,7 @@ public class AI : MonoBehaviour
                 Stop();
                 // Respond to the detected obstacle here
                 // For example, you can stop the object's movement or perform other actions
-                Debug.Log("Obstacle detected. Stopping the object.");
+              //  Debug.Log("Obstacle detected. Stopping the object.");
             }
             else Move();
         }

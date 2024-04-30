@@ -40,6 +40,13 @@ public class RagdollEnabler : MonoBehaviour
     [Header("Score")]
     public TextMeshProUGUI Text;
 
+
+    [Header("UI")]
+
+    public GameObject Victory;
+
+    public GameObject Panel;
+
 //    public bool Big_View;
     private void Awake()
     {
@@ -224,11 +231,22 @@ public class RagdollEnabler : MonoBehaviour
             Anim.SetBool("Dance", true);
            
             Anim.SetBool("run", false);
+
+
+            Victory_Message();
         }
 
     }
 
 
 
+    void Victory_Message()
+    {
+
+        Manager_Script.Panel_Anim.SetBool("Open", false);
+        
+        //Panel.SetActive(false);
+        Victory.SetActive(true);
+    }
 
 }
